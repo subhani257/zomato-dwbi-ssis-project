@@ -1,0 +1,82 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\SKY PC\\Documents\\DWBI Assignment 1\\SSIS\\DWBI Asignment\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2D773B79-1949-8B57-CAEB-7CE648BBB8D0}|DWBI Asignment.dtproj|C:\\Users\\SKY PC\\Documents\\DWBI Assignment 1\\SSIS\\DWBI Asignment\\Update_Fact.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{2D773B79-1949-8B57-CAEB-7CE648BBB8D0}|DWBI Asignment.dtproj|solutionrelative:Update_Fact.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D773B79-1949-8B57-CAEB-7CE648BBB8D0}|DWBI Asignment.dtproj|C:\\Users\\SKY PC\\Documents\\DWBI Assignment 1\\SSIS\\DWBI Asignment\\DWBI_DW.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{2D773B79-1949-8B57-CAEB-7CE648BBB8D0}|DWBI Asignment.dtproj|solutionrelative:DWBI_DW.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D773B79-1949-8B57-CAEB-7CE648BBB8D0}|DWBI Asignment.dtproj|C:\\Users\\SKY PC\\Documents\\DWBI Assignment 1\\SSIS\\DWBI Asignment\\DWBI_Staging.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{2D773B79-1949-8B57-CAEB-7CE648BBB8D0}|DWBI Asignment.dtproj|solutionrelative:DWBI_Staging.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D773B79-1949-8B57-CAEB-7CE648BBB8D0}|DWBI Asignment.dtproj|C:\\Users\\SKY PC\\Documents\\DWBI Assignment 1\\SSIS\\DWBI Asignment\\Data_Profiling.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{2D773B79-1949-8B57-CAEB-7CE648BBB8D0}|DWBI Asignment.dtproj|solutionrelative:Data_Profiling.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DWBI_Staging.dtsx [Design]",
+              "DocumentMoniker": "C:\\Users\\SKY PC\\Documents\\DWBI Assignment 1\\SSIS\\DWBI Asignment\\DWBI_Staging.dtsx",
+              "RelativeDocumentMoniker": "DWBI_Staging.dtsx",
+              "ToolTip": "C:\\Users\\SKY PC\\Documents\\DWBI Assignment 1\\SSIS\\DWBI Asignment\\DWBI_Staging.dtsx [Design]",
+              "RelativeToolTip": "DWBI_Staging.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-03-21T08:03:42.378Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Update_Fact.dtsx [Design]",
+              "DocumentMoniker": "C:\\Users\\SKY PC\\Documents\\DWBI Assignment 1\\SSIS\\DWBI Asignment\\Update_Fact.dtsx",
+              "RelativeDocumentMoniker": "Update_Fact.dtsx",
+              "ToolTip": "C:\\Users\\SKY PC\\Documents\\DWBI Assignment 1\\SSIS\\DWBI Asignment\\Update_Fact.dtsx [Design]",
+              "RelativeToolTip": "Update_Fact.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-03-25T15:02:03.572Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DWBI_DW.dtsx [Design]",
+              "DocumentMoniker": "C:\\Users\\SKY PC\\Documents\\DWBI Assignment 1\\SSIS\\DWBI Asignment\\DWBI_DW.dtsx",
+              "RelativeDocumentMoniker": "DWBI_DW.dtsx",
+              "ToolTip": "C:\\Users\\SKY PC\\Documents\\DWBI Assignment 1\\SSIS\\DWBI Asignment\\DWBI_DW.dtsx [Design]",
+              "RelativeToolTip": "DWBI_DW.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-03-22T02:52:39.667Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Data_Profiling.dtsx [Design]",
+              "DocumentMoniker": "C:\\Users\\SKY PC\\Documents\\DWBI Assignment 1\\SSIS\\DWBI Asignment\\Data_Profiling.dtsx",
+              "RelativeDocumentMoniker": "Data_Profiling.dtsx",
+              "ToolTip": "C:\\Users\\SKY PC\\Documents\\DWBI Assignment 1\\SSIS\\DWBI Asignment\\Data_Profiling.dtsx [Design]",
+              "RelativeToolTip": "Data_Profiling.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-03-21T14:56:51.651Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

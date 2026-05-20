@@ -1,0 +1,258 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{37E4DEF8-FDB0-4508-B3EA-406C46ACEDA6}" Name="Cart_Profile.xml">
+      <DtsConnectionManagerID>Cart_Profile.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{3980B298-0B12-4CCF-98D9-84D4A3E1AD0D}" Name="Order_Profile.xml">
+      <DtsConnectionManagerID>Order_Profile.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{CC50B5D5-110E-40DE-9A27-D01E68E75FBF}" Name="Recommendations_profile.xml">
+      <DtsConnectionManagerID>Recommendations_profile.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{F96CF8E1-EA74-497E-B779-E8FCF03D6F62}" Name="Restaurants_profile.xml">
+      <DtsConnectionManagerID>Restaurants_profile.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{DA16F369-C094-43F5-B99F-FEC985281E77}" Name="Sessions_Profile.xml">
+      <DtsConnectionManagerID>Sessions_Profile.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{ED56BD0E-A30C-422A-A270-DBC406590A01}" Name="SUBHANI.DWBI_Staging">
+      <DtsConnectionManagerID>SUBHANI.DWBI_Staging</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{CD905217-A16F-483F-B79F-AC23A04CBDB1}" Name="Users_Profile.xml">
+      <DtsConnectionManagerID>Users_Profile.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgOrder" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgOrder" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgOrder" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgOrder" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgOrder" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgOrder" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgOrder" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgOrder" RowCount="100000" />
+        <Column Name="session_id" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgOrder" RowCount="100000" />
+        <Column Name="any_addon_added" SqlDbType="Bit" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgOrder" RowCount="100000" />
+        <Column Name="actual_added_addon_names" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgOrder" RowCount="100000" />
+        <Column Name="actual_added_addon_categories" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgOrder" RowCount="100000" />
+        <Column Name="actual_added_addon_count" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgOrder" RowCount="100000" />
+        <Column Name="actual_added_addon_value" SqlDbType="Money" MaxLength="0" Precision="19" Scale="4" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgOrder" RowCount="100000" />
+        <Column Name="final_order_value" SqlDbType="Money" MaxLength="0" Precision="19" Scale="4" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgOrder" RowCount="100000" />
+        <Column Name="session_id" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0</MinValue>
+        <MaxValue>99999</MaxValue>
+        <Mean>49999.5</Mean>
+        <StdDev>28867.5134580379</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgOrder" RowCount="100000" />
+        <Column Name="actual_added_addon_count" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0</MinValue>
+        <MaxValue>6</MaxValue>
+        <Mean>0.39222</Mean>
+        <StdDev>0.810520494250454</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgOrder" RowCount="100000" />
+        <Column Name="actual_added_addon_value" SqlDbType="Money" MaxLength="0" Precision="19" Scale="4" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0.0000</MinValue>
+        <MaxValue>1058.3100</MaxValue>
+        <Mean>36.1507784000003</Mean>
+        <StdDev>85.0815151931258</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgOrder" RowCount="100000" />
+        <Column Name="final_order_value" SqlDbType="Money" MaxLength="0" Precision="19" Scale="4" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>82.9700</MinValue>
+        <MaxValue>2289.1900</MaxValue>
+        <Mean>464.873398600012</Mean>
+        <StdDev>263.084041841985</StdDev>
+      </ColumnStatisticsProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgOrder" RowCount="100000" />
+        <KeyColumns>
+          <Column Name="session_id" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgOrder" RowCount="100000" />
+        <Column Name="session_id" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>100000</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgOrder" RowCount="100000" />
+        <Column Name="any_addon_added" SqlDbType="Bit" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>2</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>False</Value>
+            <Count>76378</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>True</Value>
+            <Count>23622</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgOrder" RowCount="100000" />
+        <Column Name="actual_added_addon_count" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>7</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>0</Value>
+            <Count>76378</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3</Value>
+            <Count>2796</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>12398</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4</Value>
+            <Count>652</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2</Value>
+            <Count>7688</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgOrder" RowCount="100000" />
+        <DeterminantColumns>
+          <Column Name="session_id" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="actual_added_addon_count" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgOrder" RowCount="100000" />
+        <DeterminantColumns>
+          <Column Name="session_id" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="any_addon_added" SqlDbType="Bit" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="FDReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgOrder" RowCount="100000" />
+        <DeterminantColumns>
+          <Column Name="actual_added_addon_count" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="any_addon_added" SqlDbType="Bit" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>

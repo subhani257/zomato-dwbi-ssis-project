@@ -1,0 +1,367 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{37E4DEF8-FDB0-4508-B3EA-406C46ACEDA6}" Name="Cart_Profile.xml">
+      <DtsConnectionManagerID>Cart_Profile.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{3980B298-0B12-4CCF-98D9-84D4A3E1AD0D}" Name="Order_Profile.xml">
+      <DtsConnectionManagerID>Order_Profile.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{CC50B5D5-110E-40DE-9A27-D01E68E75FBF}" Name="Recommendations_profile.xml">
+      <DtsConnectionManagerID>Recommendations_profile.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{F96CF8E1-EA74-497E-B779-E8FCF03D6F62}" Name="Restaurants_profile.xml">
+      <DtsConnectionManagerID>Restaurants_profile.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{DA16F369-C094-43F5-B99F-FEC985281E77}" Name="Sessions_Profile.xml">
+      <DtsConnectionManagerID>Sessions_Profile.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{ED56BD0E-A30C-422A-A270-DBC406590A01}" Name="SUBHANI.DWBI_Staging">
+      <DtsConnectionManagerID>SUBHANI.DWBI_Staging</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{CD905217-A16F-483F-B79F-AC23A04CBDB1}" Name="Users_Profile.xml">
+      <DtsConnectionManagerID>Users_Profile.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgRecommendations" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgRecommendations" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgRecommendations" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgRecommendations" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgRecommendations" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgRecommendations" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgRecommendations" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq1">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgRecommendations" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq1">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgRecommendations" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq1">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgRecommendations" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq1">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgRecommendations" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq1">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgRecommendations" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq1">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgRecommendations" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq1">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgRecommendations" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="session_id" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="recommended_addon_names" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="recommended_addon_categories" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="recommended_addon_prices" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="avg_reco_score" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="avg_reco_price_ratio" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="avg_reco_popularity" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="avg_reco_is_complementary" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="session_id" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0</MinValue>
+        <MaxValue>99999</MaxValue>
+        <Mean>49999.5</Mean>
+        <StdDev>28867.5134580379</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="avg_reco_score" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0.1664</MinValue>
+        <MaxValue>0.6807</MaxValue>
+        <Mean>0.434250962</Mean>
+        <StdDev>0.0675463278948149</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="avg_reco_price_ratio" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0.0511</MinValue>
+        <MaxValue>1.0608</MaxValue>
+        <Mean>0.296158898</Mean>
+        <StdDev>0.131235941391164</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="avg_reco_popularity" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0.1928</MinValue>
+        <MaxValue>0.8047</MaxValue>
+        <Mean>0.528998228</Mean>
+        <StdDev>0.0729831170782685</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="avg_reco_is_complementary" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0</MinValue>
+        <MaxValue>1</MaxValue>
+        <Mean>0.79776375</Mean>
+        <StdDev>0.190167769182734</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="session_id" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="recommended_addon_names" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="recommended_addon_categories" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="recommended_addon_prices" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="avg_reco_score" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="avg_reco_price_ratio" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="avg_reco_popularity" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="avg_reco_is_complementary" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq1">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="session_id" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0</MinValue>
+        <MaxValue>99999</MaxValue>
+        <Mean>49999.5</Mean>
+        <StdDev>28867.5134580379</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq1">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="avg_reco_score" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0.1664</MinValue>
+        <MaxValue>0.6807</MaxValue>
+        <Mean>0.434250962</Mean>
+        <StdDev>0.0675463278948149</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq1">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="avg_reco_price_ratio" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0.0511</MinValue>
+        <MaxValue>1.0608</MaxValue>
+        <Mean>0.296158898</Mean>
+        <StdDev>0.131235941391164</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq1">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="avg_reco_popularity" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0.1928</MinValue>
+        <MaxValue>0.8047</MaxValue>
+        <Mean>0.528998228</Mean>
+        <StdDev>0.0729831170782685</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq1">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="avg_reco_is_complementary" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0</MinValue>
+        <MaxValue>1</MaxValue>
+        <Mean>0.79776375</Mean>
+        <StdDev>0.190167769182734</StdDev>
+      </ColumnStatisticsProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq1">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <KeyColumns>
+          <Column Name="session_id" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq1">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="session_id" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>100000</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <KeyColumns>
+          <Column Name="session_id" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgRecommendations" RowCount="100000" />
+        <Column Name="session_id" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>100000</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>

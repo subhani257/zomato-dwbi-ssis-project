@@ -1,0 +1,311 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{37E4DEF8-FDB0-4508-B3EA-406C46ACEDA6}" Name="Cart_Profile.xml">
+      <DtsConnectionManagerID>Cart_Profile.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{3980B298-0B12-4CCF-98D9-84D4A3E1AD0D}" Name="Order_Profile.xml">
+      <DtsConnectionManagerID>Order_Profile.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{CC50B5D5-110E-40DE-9A27-D01E68E75FBF}" Name="Recommendations_profile.xml">
+      <DtsConnectionManagerID>Recommendations_profile.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{F96CF8E1-EA74-497E-B779-E8FCF03D6F62}" Name="Restaurants_profile.xml">
+      <DtsConnectionManagerID>Restaurants_profile.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{DA16F369-C094-43F5-B99F-FEC985281E77}" Name="Sessions_Profile.xml">
+      <DtsConnectionManagerID>Sessions_Profile.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{ED56BD0E-A30C-422A-A270-DBC406590A01}" Name="SUBHANI.DWBI_Staging">
+      <DtsConnectionManagerID>SUBHANI.DWBI_Staging</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{CD905217-A16F-483F-B79F-AC23A04CBDB1}" Name="Users_Profile.xml">
+      <DtsConnectionManagerID>Users_Profile.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgCart" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgCart" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgCart" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgCart" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgCart" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgCart" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table Schema="dbo" Table="StgCart" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgCart" RowCount="100000" />
+        <Column Name="session_id" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgCart" RowCount="100000" />
+        <Column Name="base_cart_item_names" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgCart" RowCount="100000" />
+        <Column Name="base_cart_item_categories" SqlDbType="NVarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgCart" RowCount="100000" />
+        <Column Name="base_cart_item_count" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgCart" RowCount="100000" />
+        <Column Name="base_cart_value" SqlDbType="Money" MaxLength="0" Precision="19" Scale="4" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgCart" RowCount="100000" />
+        <Column Name="cart_has_drink" SqlDbType="Bit" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgCart" RowCount="100000" />
+        <Column Name="cart_has_dessert" SqlDbType="Bit" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgCart" RowCount="100000" />
+        <Column Name="cart_has_side" SqlDbType="Bit" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgCart" RowCount="100000" />
+        <Column Name="cart_completion_score" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgCart" RowCount="100000" />
+        <Column Name="session_id" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0</MinValue>
+        <MaxValue>99999</MaxValue>
+        <Mean>49999.5</Mean>
+        <StdDev>28867.5134580379</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgCart" RowCount="100000" />
+        <Column Name="base_cart_item_count" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>1</MinValue>
+        <MaxValue>6</MaxValue>
+        <Mean>1.89753</Mean>
+        <StdDev>0.896297885247979</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgCart" RowCount="100000" />
+        <Column Name="base_cart_value" SqlDbType="Money" MaxLength="0" Precision="19" Scale="4" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>83.0000</MinValue>
+        <MaxValue>1705.0000</MaxValue>
+        <Mean>428.72336</Mean>
+        <StdDev>238.719880048375</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgCart" RowCount="100000" />
+        <Column Name="cart_completion_score" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0.5</MinValue>
+        <MaxValue>1</MaxValue>
+        <Mean>0.596177494689226</Mean>
+        <StdDev>0.12779637074672</StdDev>
+      </ColumnStatisticsProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgCart" RowCount="100000" />
+        <KeyColumns>
+          <Column Name="session_id" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgCart" RowCount="100000" />
+        <Column Name="session_id" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>100000</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgCart" RowCount="100000" />
+        <Column Name="base_cart_item_count" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>6</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>3</Value>
+            <Count>19757</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>40120</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4</Value>
+            <Count>4442</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>5</Value>
+            <Count>396</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2</Value>
+            <Count>35274</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgCart" RowCount="100000" />
+        <Column Name="cart_has_drink" SqlDbType="Bit" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>2</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>False</Value>
+            <Count>87011</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>True</Value>
+            <Count>12989</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgCart" RowCount="100000" />
+        <Column Name="cart_has_dessert" SqlDbType="Bit" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>2</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>False</Value>
+            <Count>93077</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>True</Value>
+            <Count>6923</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgCart" RowCount="100000" />
+        <Column Name="cart_has_side" SqlDbType="Bit" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>2</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>False</Value>
+            <Count>90144</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>True</Value>
+            <Count>9856</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgCart" RowCount="100000" />
+        <DeterminantColumns>
+          <Column Name="session_id" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="cart_has_side" SqlDbType="Bit" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgCart" RowCount="100000" />
+        <DeterminantColumns>
+          <Column Name="session_id" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="cart_has_dessert" SqlDbType="Bit" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgCart" RowCount="100000" />
+        <DeterminantColumns>
+          <Column Name="session_id" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="cart_has_drink" SqlDbType="Bit" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{ED56BD0E-A30C-422A-A270-DBC406590A01}</DataSourceID>
+        <Table DataSource="SUBHANI" Database="DWBI_Staging" Schema="dbo" Table="StgCart" RowCount="100000" />
+        <DeterminantColumns>
+          <Column Name="session_id" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="base_cart_item_count" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>
